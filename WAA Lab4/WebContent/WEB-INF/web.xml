@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>WAA Lab4</display-name>
+  <welcome-file-list>
+    <welcome-file>name.jsp</welcome-file>
+  </welcome-file-list>
+   <servlet>
+    <servlet-name>AddNamesServlet</servlet-name>
+    <servlet-class>com.ramesh.servlet.AddNamesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNamesServlet</servlet-name>
+    <url-pattern>/servlet/AddNamesServlet/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AllNamesServlet</servlet-name>
+    <servlet-class>com.ramesh.servlet.AllNamesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllNamesServlet</servlet-name>
+    <url-pattern>/servlet/AllNamesServlet/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemoveNamesServlet</servlet-name>
+    <servlet-class>com.ramesh.servlet.RemoveNamesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveNamesServlet</servlet-name>
+    <url-pattern>/servlet/RemoveNamesServlet/</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
