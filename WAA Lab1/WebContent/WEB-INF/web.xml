@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>WAA Lab1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>org.ramesh.waa.lab1.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/HelloServlet/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogonServlet</servlet-name>
+    <servlet-class>org.ramesh.waa.lab1.LogonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogonServlet</servlet-name>
+    <url-pattern>/servlet/LogonServlet/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GuessNumber</servlet-name>
+    <servlet-class>org.ramesh.waa.lab1.GuessNumber</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GuessNumber</servlet-name>
+    <url-pattern>/servlet/GuessNumber/</url-pattern>
+  </servlet-mapping>
+</web-app>
