@@ -52,7 +52,7 @@ public class calcManagedBean {
 		return "";
 	}
 	public String divide(){
-		result=Integer.toString(firstNumber/secondNumber);
+		result=secondNumber == 0 ? "n/a" : Double.toString(firstNumber/secondNumber);
 		return "";
 	}
 	
