@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>
+ Calculator 
+</title>
+</h:head>
+<h:body>
+<h:form>
+First Number <h:inputText value="${calcManagedBean.firstNumber}" />
+<br/><br/>
+Second Number<h:inputText value="${calcManagedBean.secondNumber}" />
+<br/><br/>
+<h:commandButton action="${calcManagedBean.add}" value="Add" />&nbsp;
+<h:commandButton action="${calcManagedBean.subtract}" value="Subtract" />&nbsp;
+<h:commandButton action="${calcManagedBean.multiply}" value="Multiply" />&nbsp;
+<h:commandButton action="${calcManagedBean.divide}" value="Divide"/><br/><br/>
+Result: <h:outputText value="${calcManagedBean.result}" />
+</h:form>
+</h:body>
+</html>
