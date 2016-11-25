@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>WAA Lab6::Search For Flight</title>
+</h:head>
+<h:body>
+<h:form>
+ From <h:selectOneMenu value="#{jSFUICompoment.from_source}">
+ 		<f:selectItem itemValue="Amsterdam" itemLabel="Amsterdam"/>
+ 		<f:selectItem itemValue="Paris" itemLabel="Paris"/>
+ 		<f:selectItem itemValue="Lissabon" itemLabel="Lissabon"/>
+ </h:selectOneMenu><br/><br/>
+ To <h:selectOneMenu value="#{jSFUICompoment.to_destination}">
+ 		<f:selectItem itemValue="New York" itemLabel="New York"/>
+ 		<f:selectItem itemValue="Boston" itemLabel="Boston"/>
+ 		<f:selectItem itemValue="Chicago" itemLabel="Chicago"/>
+ </h:selectOneMenu><br/><br/>
+ Departure Date <h:inputText value="#{jSFUICompoment.depart_date}" /><br/><br/>
+ Return Date <h:inputText value="#{jSFUICompoment.return_date}" /><br/><br/>
+ <h:selectOneRadio value="#{jSFUICompoment.trip}">
+            <f:selectItem itemValue="Round Trip " itemLabel="Round Trip" />
+            <f:selectItem itemValue="One Way" itemLabel="One Way" />
+  </h:selectOneRadio><br/>  
+  <h:selectManyCheckbox value="#{jSFUICompoment.options}" layout="pageDirection">
+         <f:selectItem itemValue="first class" itemLabel="First Class" />
+         <f:selectItem itemValue="exact these dates" itemLabel="Exact these Dates" />
+         <f:selectItem itemValue="no stopover" itemLabel="No Stopover" />
+  </h:selectManyCheckbox><br/>
+ <h:commandButton action="#{jSFUICompoment.output}" value="Submit" />     
+</h:form>
+</h:body>   
+</html>
