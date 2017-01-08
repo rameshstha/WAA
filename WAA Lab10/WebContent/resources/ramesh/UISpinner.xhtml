@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+<body>
+<composite:interface>
+        <composite:attribute name="monthLabel" />
+    	<composite:attribute name="monthValue" />
+    	<composite:attribute name="yearLabel" />
+    	<composite:attribute name="yearValue" />
+        <composite:attribute name="incrementmonthButton"/>
+    	<composite:attribute name="incrementmonthButtonAction" method-signature="java.lang.String action()" />
+    	<composite:attribute name="decrementmonthButton" />
+    	<composite:attribute name="decrementmonthButtonAction" method-signature="java.lang.String action()"/>
+    	
+    	<composite:attribute name="incrementyearButton"/>
+    	<composite:attribute name="incrementyearButtonAction" method-signature="java.lang.String action()"/>
+    	<composite:attribute name="decrementyearButton" />
+    	<composite:attribute name="decrementyearButtonAction" method-signature="java.lang.String action()"/>
+    	
+    	<composite:attribute name="nextButton" />
+    	<composite:attribute name="nextButtonAction" method-signature="java.lang.String action()"/>
+</composite:interface>
+<composite:implementation>
+<h:form>
+<h:panelGrid columns="4">
+
+	#{cc.attrs.monthLabel}:
+    <h:inputText id="month" value="#{cc.attrs.monthValue}"></h:inputText> 
+    <h:commandButton action="#{cc.attrs.decrementmonthButtonAction}" value="#{cc.attrs.decrementmonthButton}" />
+    <h:commandButton action="#{cc.attrs.incrementmonthButtonAction}" value="#{cc.attrs.incrementmonthButton}" />
+    
+    #{cc.attrs.yearLabel}:
+    <h:inputText id="year" value="#{cc.attrs.yearValue}"/>
+    <h:commandButton action="#{cc.attrs.decrementyearButtonAction}" value="#{cc.attrs.decrementyearButton}" />
+    <h:commandButton action="#{cc.attrs.incrementyearButtonAction}" value="#{cc.attrs.incrementyearButton}" />
+    <br/>
+    <h:commandButton action="#{cc.attrs.nextButtonAction}" value="#{cc.attrs.nextButton}" />
+</h:panelGrid>
+</h:form>
+</composite:implementation>
+</body>
+</html>
