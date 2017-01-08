@@ -1,0 +1,15 @@
+#header {
+ padding: 2px;
+height: 15px;
+ color:red;
+ font-weight: bold;
+ font-size:18px;
+ text-align:center;
+}
+#sidebar {
+ text-align:center;
+ padding: 1px;
+}
+#content {
+ padding: 5px;
+}

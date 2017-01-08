@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+<ui:composition>
+
+<h:panelGroup id="t">
+<h:form>
+<table border='1'>
+<tr><td> <h:link value="Frank Brown" outcome="index" /></td></tr>
+<tr><td><h:link value="John Doe" outcome="secondUser" /></td></tr>
+<tr><td><h:link value="Mary Jones" outcome="thirdUser" /></td></tr>
+</table>
+<h:commandButton id="b" value="ShowAll" action="#{myBean.doAction}"/>
+</h:form>
+</h:panelGroup>
+
+<div id="t1">
+<h:form>
+ <h:commandButton value="Back to Master-Detail"  id="b1" action="#{myBean.undoAction}"/>
+ </h:form>
+</div>
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+<script>
+$(function(){
+
+ $("#t1").toggle();
+ $("#b").click(function(){
+  
+ $("#t").hide();
+ $("#t1").show();
+ //window.location.href="showAll.xhtml";
+ return false;
+ 
+ });
+
+ 
+ $("#b1").click(function(){
+ $("#t1").hide();
+ $("#t").show();
+//  window.location.href="index.xhtml";
+  return false;
+ 
+});
+
+});
+
+</script> -->
+
+</ui:composition>
+
+</h:body>
+</html>
