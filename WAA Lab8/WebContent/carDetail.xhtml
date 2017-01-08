@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head><title>WAA Lab8::Car Details</title></h:head>
+<h:body>
+<h:form>
+Brand<h:inputText value="#{carValidationBean.brand}" id="brand">
+<f:validator validatorId="com.ramesh.BrandValidator"/>
+</h:inputText>
+<h:message for="brand" style="color:red"/>
+<br/>
+License nr.<h:inputText value="#{carValidationBean.license}" id="license">
+<f:validator validatorId="com.ramesh.LicenseValidator"/>
+</h:inputText>
+<h:message for="license" style="color:red"/>
+<br/>
+Price<h:inputText value="#{carValidationBean.price}" id="price">
+<f:validator validatorId="com.ramesh.PriceValidator"/>
+</h:inputText>
+<h:message for="price" style="color:red"/>
+<br/>
+<h:commandButton value="Submit" />
+</h:form>
+</h:body>    
+</html>

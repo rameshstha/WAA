@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title>WAA Lab 8::Date and Temperature Conversion</title>
+</h:head>
+<h:body>
+<h:form>
+Date<h:inputText value="#{dateTempConversion.date}" id="date" label="Date">
+<f:convertDateTime pattern="dd/MM/yy"/>
+</h:inputText>
+<h:message for="date" style="color:red" />
+<br/>
+Temperature <h:inputText value="#{dateTempConversion.temperature}" id="temp" label="Temperature" >
+  
+  <f:converter converterId="com.ramesh.TempConverter" />
+</h:inputText>
+ <h:message for="temp" style="color:red"/>
+<br/>
+<h:commandButton action="#{dateTempConversion.outputConv}" value="Submit" />
+</h:form>
+</h:body>      
+</html>
