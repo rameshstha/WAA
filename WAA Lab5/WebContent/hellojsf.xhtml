@@ -8,11 +8,11 @@
 </h:head> 
 <h:body> 
 	<h:form>
-		<h:inputText value="#{helloManagedBean.name}" />
+		<h:inputText value="${helloManagedBean.name}" />
 		<br/>
 		<h:commandButton action="${helloManagedBean.sayHello}" value="Say Hello" />
 		<br/>
-		<h:outputText value="#{helloManagedBean.name}" />
+		<h:outputText value="${helloManagedBean.name}" />
 	</h:form>
 </h:body> 
 </html>
