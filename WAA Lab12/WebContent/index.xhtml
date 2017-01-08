@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>WAA Lab12::Shopping Cart</title>
+</h:head>
+<h:body>
+<div align="center">
+<h:form>
+<h:outputText value="CD Shop" style="color:red;font-weight:bold"/><br/>
+<h:dataTable border="1" value="#{productBean.productdetails}" var="p">
+<h:column>
+<f:facet name="header">Product Code</f:facet>
+#{p.productCode}
+</h:column>
+<h:column>
+<f:facet name="header">Product Name</f:facet>
+#{p.productName}
+</h:column>
+<h:column>
+<f:facet name="header">Price</f:facet>
+#{p.price}
+</h:column>
+<h:column>
+<h:commandButton action="#{productBean.shoppingCartList(p.productCode,p.productName,p.price,p.quantity)}"  value="Add to Cart"/>
+</h:column>
+</h:dataTable>
+<br/>
+<h:commandLink action="#{productBean.showShoppingCart}" value="Show Shoppingcart" />
+</h:form>
+</div>
+</h:body>
+</html>
